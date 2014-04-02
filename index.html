@@ -6,6 +6,7 @@
     <title>Videojs-rangeplay by ch4nd4n</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="http://vjs.zencdn.net/4.2/video-js.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -30,6 +31,12 @@
       <section>
         <h3>
 <a name="videojs-range-play" class="anchor" href="#videojs-range-play"><span class="octicon octicon-link"></span></a>VideoJs Range play</h3>
+      <p>
+        <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="320" height="180" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup='{}'>
+          <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+        </video>
+      </p>
+      <p>Above video would play between 10 to 30 seconds. Even though it is 46 seconds in length.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ch4nd4n">ch4nd4n</a></p>
@@ -37,6 +44,14 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="http://vjs.zencdn.net/4.2/video.js"></script>
+    <script src="rangeplay.videojs.js"></script>
+    <script>
+      var range = {startTime : 10, endTime: 30};
+      var player = _V_('example_video_1', {});
+      player.rangePlay(range);
+    </script>
+
+
   </body>
 </html>
